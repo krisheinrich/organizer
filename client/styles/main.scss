@@ -1,0 +1,54 @@
+body, html {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1;
+  font-family: Helvetica, Ubuntu, sans-serif;
+}
+
+body, html, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex: 1 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  // border: 8px solid green;
+
+  nav {
+    width: 240px;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    background: #999;
+
+    ul.navbar {
+      list-style: none;
+
+      li {
+        padding: 6px 10px;
+        border: 1px solid gray;
+      }
+    }
+  }
+
+  .page-content {
+    flex: 1;
+    align-content: center;
+  }
+}
