@@ -40,9 +40,15 @@ body, html, ul, li {
     ul.navbar {
       list-style: none;
 
-      li {
-        padding: 6px 10px;
-        border: 1px solid gray;
+      li a {
+        text-align: center;
+        display: block;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: #cde;
+        font-size: 1.6rem;
+
+        &:hover { background: #bbb; }
       }
     }
   }
