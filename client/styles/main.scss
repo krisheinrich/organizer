@@ -11,6 +11,8 @@ body, html, ul, li {
   padding: 0;
 }
 
+ul { list-style: none; }
+
 .row {
   display: flex;
   flex: 1 0;
@@ -37,24 +39,24 @@ body, html, ul, li {
     overflow: hidden;
     background: #999;
 
-    ul.navbar {
-      list-style: none;
+    ul.navbar li a {
+      text-align: center;
+      display: block;
+      padding: 10px 10px;
+      text-decoration: none;
+      color: #cde;
+      font-size: 1.6rem;
 
-      li a {
-        text-align: center;
-        display: block;
-        padding: 10px 10px;
-        text-decoration: none;
-        color: #cde;
-        font-size: 1.6rem;
-
-        &:hover { background: #bbb; }
-      }
+      &:hover { background: #bbb; }
     }
   }
 
   .page-content {
     flex: 1;
     align-content: center;
+
+    .full-page {
+      padding: 30px;
+    }
   }
 }
