@@ -1,8 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-
-export const Tasks = new Mongo.Collection('tasks');
-export const Projects = new Mongo.Collection('projects');
-export const Tags = new Mongo.Collection('tags');
+import { Tasks, Projects, Tags } from '../lib/collections';
+import '../imports/api/methods';
 
 Meteor.startup(() => {
   Meteor.publish('tasks', () => Tasks.find());
