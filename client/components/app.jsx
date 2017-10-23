@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import Tasks from './tasks';
 import Projects from './projects';
 import Categories from './categories';
@@ -8,9 +8,9 @@ const App = () => (
   <div className="app">
     <nav className="col">
       <ul className="navbar">
-        <li><Link to="/tasks">Tasks</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/categories">Categories</Link></li>
+        <li><NavLink to="/tasks" activeClassName="active">Tasks</NavLink></li>
+        <li><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
+        <li><NavLink to="/categories" activeClassName="active">Categories</NavLink></li>
       </ul>
     </nav>
     <div className="page-content">

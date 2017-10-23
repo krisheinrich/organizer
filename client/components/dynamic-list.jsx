@@ -1,21 +1,22 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import { PropTypes } from 'prop-types';
 
-export const DynamicList = ({ type, items, placeholder, onInputRef, onSubmit }) => (
-  <section className={`${type}-list`}>
+export const DynamicList = ({
+  children, type, items, placeholder, onInputRef, onSubmit, onCheck, onDelete
+}) => (
+  <section className={`dyn-list ${type}-list`}>
     <ul>
-    { items.map((item, i) => <li key={i}>{`${i} ${item.title}`}</li>) }
+      { children }
     </ul>
-    <input ref={onInputRef} type="text"
-      placeholder={placeholder || `Create a new ${type}`}
-    />
-    <button onClick={onSubmit}>Add {type}</button>
+    <div className="row">
+      <input ref={onInputRef} type="text" placeholder={placeholder || `Create a new ${type}`} />
+      <button onClick={onSubmit}>Add {type}</button>
+    </div>
   </section>
 );
 
 DynamicList.propTypes = {
   type: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired,
   onInputRef: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
