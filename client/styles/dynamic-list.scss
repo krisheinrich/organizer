@@ -1,0 +1,49 @@
+@import "variables";
+
+.dyn-list {
+  ul li.list-item {
+    display: flex;
+    min-height: 26px;
+    margin: 2px 0;
+    padding: 6px 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 1px solid $offwhite;
+    user-select: none;
+
+    .completed {
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .fa {
+      font-size: 18px;
+      &.fa-square-o,
+      &.fa-check-square-o {
+        color: #333;
+        width: 22px;
+      }
+      &.fa-times {
+        color: red;
+        opacity: 0;
+      }
+    }
+
+    &:hover .fa-times {
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+  }
+
+  input, button {
+    padding: 6px;
+    font-size: 1.4rem;
+  }
+  input { flex: 1; }
+  button {
+    background: #6762c2;
+    color: white;
+  }
+
+}

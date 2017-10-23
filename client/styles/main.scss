@@ -1,9 +1,11 @@
+@import "variables";
+
 body, html {
   width: 100%;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 1;
-  font-family: Helvetica, Ubuntu, sans-serif;
+  font-family: Roboto, Noto, Ubuntu, Helvetica, sans-serif;
 }
 
 body, html, ul, li {
@@ -30,33 +32,39 @@ ul { list-style: none; }
 
 .app {
   display: flex;
-  // border: 8px solid green;
 
   nav {
     width: 240px;
     height: 100vh;
     justify-content: center;
     overflow: hidden;
-    background: #999;
+    @extend .bg-vert-gradient-green;
 
     ul.navbar li a {
       text-align: center;
       display: block;
-      padding: 10px 10px;
+      padding: 16px 10px;
       text-decoration: none;
       color: #cde;
       font-size: 1.6rem;
 
-      &:hover { background: #bbb; }
+      &:hover { background: #596; }
+      &.active { background: $dark-green; }
     }
   }
 
   .page-content {
+    justify-content: center;
+    background: $offwhite;
     flex: 1;
-    align-content: center;
+    display: flex;
 
     .full-page {
+      flex: 1;
       padding: 30px;
+      margin: 10px;
+      max-width: 1080px;
+      @extend .bg-vert-gradient-offwhite;
     }
   }
 }
