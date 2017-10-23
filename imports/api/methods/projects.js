@@ -11,3 +11,12 @@ export const createProject = (title) => {
   };
   Projects.insert(project);
 };
+
+export const deleteProject = (projectId) => {
+  check(projectId, String);
+  const project = Projects.findOne(projectId);
+  if (!project)
+    return console.warn("Error: Failed to delete -- No project found");
+
+  Projects.remove(projectId);
+};
